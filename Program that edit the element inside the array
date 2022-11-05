@@ -1,0 +1,81 @@
+print("********** PROGRAMMED BY ***********")
+print("******* URIEL J. ESMERALDA *********")
+
+
+def menu():
+    print("\nMenu: \n"
+          "0 -> Exit the program\n"
+          "1 -> Add an element\n"
+          "2 -> Insert an element\n"
+          "3 -> Modify an element\n"
+          "4 -> Delete an element\n"
+          "5 -> Arrange in ascending order\n"
+          "6 -> Arrange in descending order\n"
+          "7 -> Reverse the element\n"
+          "8 -> Numbers of element\n"
+          "9 -> The Sum of the elements in the array")
+
+
+array = [1, 4, 3, 4, 4, 5, 6, 2, 56, 200]
+
+print("\nArray: ", array)
+
+while True:
+    menu()
+    option = int(input("\nWhat do you want to do? (0-9): "))
+    if option == 0:
+        print("Thank You for using the program!")
+        break
+
+    elif option == 1:
+        add = int(input("Enter a number that you want to add: "))
+        array.append(add)
+        print("The number has been added.")
+        print("\nThis is the new array: Array:", array)
+
+    elif option == 2:
+        ind = int(input("Enter the index you want to insert: "))
+        ins = int(input("Enter a number you want to insert: "))
+        array.insert(ind, ins)
+        print("The number has been inserted.")
+        print("\nThis is the new array: Array:", array)
+
+    elif option == 3:
+        ind = int(input("Enter the index you want to modify: "))
+        mod = int(input("Enter a number : "))
+        array[ind] = mod
+        print("The number has been modified.")
+        print("\nThis is the new array: Array:", array)
+
+    elif option == 4:
+        delete = int(input("Enter the index you want to delete: "))
+        array.pop(delete)
+        print("The number has been deleted.")
+        print("\nThis is the new array: Array:", array)
+
+    elif option == 5:
+        array.sort()
+        print("The array is now in ascending order.")
+        print("\nThis is the new array: Array:", array)
+
+    elif option == 6:
+        array.sort()
+        array.reverse()
+        print("The array is now in descending order.")
+        print("\nThis is the new array: Array:", array)
+
+    elif option == 7:
+        array.reverse()
+        print("The array is now in reversed.")
+        print("\nThis is the new array: Array:", array)
+
+    elif option == 8:
+        length = len(array)
+        print("\nThis is the array: Array:", array)
+        print("The numbers of element in the array are: ", length)
+
+    elif option == 9:
+        print("\nThe sum of the element in the array is: ", sum(array))
+
+    else:
+        print("\nPlease Enter numbers (0-9) ONLY !")
